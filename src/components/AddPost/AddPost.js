@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
+import './css//AddPost.css';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { addPost } from '../../actions/postActions';
+
 class AddPost extends Component {
+    submitHandler = (event) => {
+        event.preventDefault();
+        console.log("HHHHHHHHH " + this.props.addPost(this.props.post));
+    }
 
     render() {
         return (
             <div className="addPost">
                 <div className="header">
-                    <h1>Add Post</h1>
-                    <button><NavLink to="/posts">Retour</NavLink></button>
+                    <h1 className="main-title">Add Post</h1>
+                    <NavLink className="btn-back" to="/posts">Retour</NavLink>
                 </div>
-                <div className="content">
-                    <form>
-                        <div>
-                            <label htmlFor="title">Title :</label>
-                            <input type="text" id="title"  />
+                <div className="addPost-content">
+                    <form onSubmit={this.submitHandler}>
+                        <div className="group-form">
+                            <label className="label" htmlFor="title">Title :</label>
+                            <input className="control-form" type="text" id="title"  />
                         </div>
-                        <div>
-                            <label htmlFor="body">Body :</label>
-                            <textarea id="body" />
+                        <div className="group-form">
+                            <label className="label" htmlFor="body">Body :</label>
+                            <textarea className="control-form" id="body" />
                         </div>
-                        <button>Add Post</button>
+                        <button className="btn-add">Add Post</button>
                     </form>
                 </div>
             </div>
@@ -28,4 +35,10 @@ class AddPost extends Component {
     }
 }
 
-export default connect()(AddPost);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addPost : (post) => {dispatch(addPost(post))}
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AddPost);

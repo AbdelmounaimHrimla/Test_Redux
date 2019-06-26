@@ -1,0 +1,31 @@
+.home .home-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  margin-top: 20px; }
+
+.home .home-content .block {
+  box-shadow: 0 0 2px 2px #ececec;
+  padding: 10px;
+  border-radius: 5px; }
+
+.flexing {
+  display: flex;
+  justify-content: space-between;
+  align-content: center; }
+
+.home .home-content .link {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500; }
+
+.counter {
+  background: #4CAF50;
+  padding: 6px;
+  border-radius: 50%;
+  color: #FFF;
+  align-self: center; }
+
+/*# sourceMappingURL=Home.css.map */

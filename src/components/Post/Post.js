@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { deletePost } from '../../actions/postActions';
+import './css/Post.css';
 
 
 class Post extends Component {
@@ -16,18 +17,18 @@ class Post extends Component {
             <div className="card">
                 <h2>{this.props.post.title}</h2>
                 <p>{this.props.post.body}</p>
-                <button onClick={this.deleteHandler}>Delete</button>
+                <button className="btn-delete" onClick={this.deleteHandler}>Delete</button>
             </div>
         ) : (
             <div>Post Is Coming...</div>
         )
         return (
             <div className="post">
-                <div className="headre">
-                    <h1>Post</h1>
-                    <button><NavLink to="/posts">Retour</NavLink></button>
+                <div className="header">
+                    <h1 className="main-title">Post</h1>
+                    <NavLink className="btn-back" to="/posts">Retour</NavLink>
                 </div>
-                <div className="content">
+                <div className="post-content">
                     {post}
                 </div>
             </div>
