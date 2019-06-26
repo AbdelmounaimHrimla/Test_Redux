@@ -5,9 +5,12 @@ import { connect } from 'react-redux';
 import { addPost } from '../../actions/postActions';
 
 class AddPost extends Component {
+    changeHandler = (event) => {
+        console.log("VVVVV");
+    }
     submitHandler = (event) => {
         event.preventDefault();
-        console.log("HHHHHHHHH " + this.props.addPost(this.props.post));
+        console.log("HHHHHHHHH " + this.props.addPost(this.props.id, this.props.title, this.props.body));
     }
 
     render() {
@@ -20,12 +23,12 @@ class AddPost extends Component {
                 <div className="addPost-content">
                     <form onSubmit={this.submitHandler}>
                         <div className="group-form">
-                            <label className="label" htmlFor="title">Title :</label>
-                            <input className="control-form" type="text" id="title"  />
+                            <label value={this.props.title} className="label" htmlFor="title" >Title :</label>
+                            <input onChange={this.changeHandler} className="control-form" type="text" id="title"  />
                         </div>
                         <div className="group-form">
                             <label className="label" htmlFor="body">Body :</label>
-                            <textarea className="control-form" id="body" />
+                            <textarea onChange={this.changeHandler}   className="control-form" id="body" />
                         </div>
                         <button className="btn-add">Add Post</button>
                     </form>
@@ -34,11 +37,18 @@ class AddPost extends Component {
         );
     }
 }
-
-const mapDispatchToProps = (dispatch) => {
+const mapStateToProps = (state) => {
     return {
-        addPost : (post) => {dispatch(addPost(post))}
+        id : state.id,
+        title : state.title,
+        body : state.body
     }
 }
 
-export default connect(null, mapDispatchToProps)(AddPost);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addPost : (id, title, body) => {dispatch(addPost(id, title, body))}
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddPost);
