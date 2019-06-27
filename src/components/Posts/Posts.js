@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './css/Posts.css';
-import { nextPage, prevPage, firstPage, lastPage } from '../../actions/postActions';
+import { nextPage, prevPage, firstPage, lastPage, SearchPost } from '../../actions/postActions';
 
 
 class Posts extends Component {
@@ -26,6 +26,9 @@ class Posts extends Component {
         
         this.props.lastPage(this.props.statrSliced, this.props.endSliced);
     }
+
+    //SearchPostHandler 
+
     render() {
         console.log(this.props);
         const {posts, startSliced, endSliced} = this.props;
@@ -61,7 +64,7 @@ class Posts extends Component {
                 <div className="search-bar">
                     <div className="searching">
                         <label htmlFor="search">Search :</label>
-                        <input type="search" id="search" />
+                        <input type="search" id="search" onChange={this.filterList}/>
                     </div>
                     <div className="navigate">
                         <span className="navigation" onClick={this.firstPageHandler}>First</span>
@@ -104,6 +107,7 @@ const mapDispatchToProps = (dispatch) => {
         prevPage : (startSliced, endSliced) => {dispatch(prevPage(startSliced, endSliced))},
         firstPage : (startSliced, endSliced) => {dispatch(firstPage(startSliced, endSliced))},
         lastPage : (startSliced, endSliced) => {dispatch(lastPage(startSliced, endSliced))},
+        SearchPost : () => {dispatch(SearchPost())},
     }
 }
 

@@ -49,9 +49,8 @@ export const lastPage = (startSliced, endSliced) => {
 
 
 
-export const SearchPost = (searchText) => {
+export const SearchPost = () => {
     return {
         type : 'SEARCH_POST',
-        searchText : searchText
     }
 }

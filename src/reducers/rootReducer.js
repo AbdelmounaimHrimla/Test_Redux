@@ -70,9 +70,10 @@ const rootReducer = (state= initialState, action) => {
             body : state.body,
         }
     } else if (action.type === 'SEARCH_POST') {
-        return Object.assign({}, state, {
-            searchText : action.text
-        });
+        return {
+            ...state,
+            posts : action.type
+        }
     } else if (action.type === 'NEXT_PAGE') {
         return {
             ...state,

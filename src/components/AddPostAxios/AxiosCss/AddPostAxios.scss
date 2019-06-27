@@ -1,0 +1,52 @@
+.addPostAxios .header .btn-back {
+    align-self: center;
+    background: #007bff;
+    border: 1px solid #007bff;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #FFF;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.addPostAxios .addPostAxios-content {
+    margin-top : 20px;
+}
+
+.addPostAxios .addPostAxios-content .group-form {
+    margin-bottom: 10px;
+}
+
+.addPostAxios .addPostAxios-content .group-form .label{
+    display: block;
+    margin-bottom: 6px;
+}
+
+.addPostAxios .addPostAxios-content .control-form {
+    width: 90%;
+    margin-left: 20px;
+    font-size: 13px;
+    line-height: 13px;
+    border: none;
+    padding: 6px 0 6px 6px;
+    box-shadow: 0px 0px 1px 1px #DDD;
+}
+
+.addPostAxios .addPostAxios-content textarea  {
+    height: 100px;
+}
+
+.addPostAxios .addPostAxios-content .btn-add  {
+    background: #007bff;
+    border: 1px solid #007bff;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #FFF;
+    padding: 10px;
+    margin-left : 20px;
+    cursor: pointer;
+}
+

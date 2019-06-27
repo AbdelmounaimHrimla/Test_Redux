@@ -1,0 +1,22 @@
+.blogAxios .content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0px 2px 2px 2px #dfe6e9;
+  padding: 10px 18px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.main-title {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #7e8396;
+}
