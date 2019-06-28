@@ -1,7 +1,7 @@
 .postAxios .header .btn-back {
     align-self: center;
-    background: #007bff;
-    border: 1px solid #007bff;
+    background: #e17055;
+    border: 1px solid #e17055;
     font-size: 15px;
     line-height: 15px;
     font-weight: 400;
@@ -21,6 +21,16 @@
     margin: 0 auto;
     padding: 15px;
     box-shadow: 0 0 2px 2px #eae9e9;
+}
+
+.postAxios .postAxios-content .card .id-post{
+    color: #FFF;
+    background: #e17055;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
 }
 
 .postAxios .postAxios-content .card h2{

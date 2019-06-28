@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './AxiosCss/PostsAxios.css'; 
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { setPosts } from '../../actions/postActionsAxios';
+
 import axios from 'axios';
 
 class PostsAxios extends Component {
@@ -11,6 +13,9 @@ class PostsAxios extends Component {
             console.log(response);
             const posts = response.data;
             console.log(posts);
+            this.props.setPosts(posts.slice(0, 10));
+            console.log(this.props.posts);
+            //this.props.posts = posts;
             // Hena Mabatch t3mer Had Array 
             console.log( this.props.posts);
             console.log("Che7al mn Items kayn => " + posts.length);
@@ -26,13 +31,15 @@ class PostsAxios extends Component {
         return (
             <tr key={post.id}>
                 <td>{post.id}</td>
-                <td>{post.title}</td>
-                <td>{post.body}</td>
-                <td>Here</td>
+                <td>{post.title.substring(0, 20)}</td>
+                <td>{post.body.substring(0, 30)}</td>
+                <td>
+                    <NavLink className="btn-show" to={'/post/' + post.id}>Show</NavLink>
+                    <NavLink className="btn-edit" to={'/' + post.id}>Edit</NavLink>
+                </td>
             </tr>
         ) 
     } 
-    
     render() {
         const myPosts = this.props.posts.map(this.listPosts);
         return (
@@ -79,4 +86,10 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(PostsAxios);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setPosts : (posts) => {dispatch(setPosts(posts))},
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PostsAxios);

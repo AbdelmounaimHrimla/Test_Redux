@@ -1,7 +1,7 @@
 .postsAxios  .btn-new {
     align-self: center;
-    background: #efbb35;
-    border: 1px solid #efbb35;
+    background: #e17055;
+    border: 1px solid #e17055;
     font-size: 15px;
     line-height: 15px;
     font-weight: 400;
@@ -59,7 +59,7 @@
 }
 
 .postsAxios .postsAxios-content table thead{
-    background: #efbb35;
+    background: #e17055;
     color: #000;
 }
 
@@ -78,8 +78,8 @@
 }
 
 .postsAxios .postsAxios-content table tbody .btn-show {
-    background: #efbb35;
-    border: 1px solid #efbb35;
+    background: #17a2b8;
+    border: 1px solid #17a2b8;
     margin: 0 5px;
     font-size: 15px;
     line-height: 15px;
@@ -88,6 +88,20 @@
     color: #FFF;
     text-decoration:none
 }
+
+.postsAxios .postsAxios-content table tbody .btn-edit {
+    background: #28a745;
+    border: 1px solid #28a745;
+    margin: 0 5px;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 0px 5px;
+    font-weight: 500;
+    color: #FFF;
+    text-decoration:none
+}
+
+
 
 .no-post{
     color: red;

@@ -1,22 +1,20 @@
 .postsAxios .btn-new {
   align-self: center;
-  background: #efbb35;
-  border: 1px solid #efbb35;
+  background: #e17055;
+  border: 1px solid #e17055;
   font-size: 15px;
   line-height: 15px;
   font-weight: 400;
   color: #FFF;
   padding: 10px;
   cursor: pointer;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .postsAxios .search-bar label {
   font-size: 15px;
   line-height: 15px;
   font-weight: 500;
-  letter-spacing: 1px;
-}
+  letter-spacing: 1px; }
 
 .postsAxios .search-bar input {
   margin-left: 10px;
@@ -25,19 +23,16 @@
   padding: 4px 0 4px 8px;
   border: none;
   box-shadow: 0 0 1px 1px #ddd;
-  outline: none;
-}
+  outline: none; }
 
 .postsAxios .search-bar {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
-  align-content: center;
-}
+  align-content: center; }
 
 .postsAxios .navigate {
-  align-self: center;
-}
+  align-self: center; }
 
 .postsAxios .navigate .navigation {
   margin-left: 8px;
@@ -45,51 +40,55 @@
   font-weight: 600;
   font-size: 15px;
   line-height: 15px;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .postsAxios .postsAxios-content {
-  margin-top: 10px;
-}
+  margin-top: 10px; }
 
 .postsAxios .postsAxios-content table {
   width: 100%;
-  text-align: center;
-}
+  text-align: center; }
 
 .postsAxios .postsAxios-content table thead {
-  background: #efbb35;
-  color: #000;
-}
+  background: #e17055;
+  color: #000; }
 
 .postsAxios .postsAxios-content table thead th {
-  padding: 3px 0;
-}
+  padding: 3px 0; }
 
 .postsAxios .postsAxios-content table tbody tr {
   background: #f5f6fa;
   font-size: 16px;
-  line-height: 16px;
-}
+  line-height: 16px; }
 
 .postsAxios .postsAxios-content table tbody td {
-  padding: 5px 0;
-}
+  padding: 5px 0; }
 
 .postsAxios .postsAxios-content table tbody .btn-show {
-  background: #efbb35;
-  border: 1px solid #efbb35;
+  background: #17a2b8;
+  border: 1px solid #17a2b8;
   margin: 0 5px;
   font-size: 15px;
   line-height: 15px;
   padding: 0px 5px;
   font-weight: 500;
   color: #FFF;
-  text-decoration: none;
-}
+  text-decoration: none; }
+
+.postsAxios .postsAxios-content table tbody .btn-edit {
+  background: #28a745;
+  border: 1px solid #28a745;
+  margin: 0 5px;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 0px 5px;
+  font-weight: 500;
+  color: #FFF;
+  text-decoration: none; }
 
 .no-post {
   color: red;
   font-weight: bolder;
-  letter-spacing: 2px;
-}
+  letter-spacing: 2px; }
+
+/*# sourceMappingURL=PostsAxios.css.map */

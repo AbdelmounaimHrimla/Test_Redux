@@ -1,4 +1,4 @@
-.addPostAxios .header .btn-back {
+.editPostAxios .header .btn-back {
   align-self: center;
   background: #e17055;
   border: 1px solid #e17055;
@@ -11,20 +11,20 @@
   text-decoration: none;
 }
 
-.addPostAxios .addPostAxios-content {
+.editPostAxios .editPostAxios-content {
   margin-top: 20px;
 }
 
-.addPostAxios .addPostAxios-content .group-form {
+.editPostAxios .editPostAxios-content .group-form {
   margin-bottom: 10px;
 }
 
-.addPostAxios .addPostAxios-content .group-form .label {
+.editPostAxios .editPostAxios-content .group-form .label {
   display: block;
   margin-bottom: 6px;
 }
 
-.addPostAxios .addPostAxios-content .control-form {
+.editPostAxios .editPostAxios-content .control-form {
   width: 90%;
   margin-left: 20px;
   font-size: 13px;
@@ -34,13 +34,13 @@
   box-shadow: 0px 0px 1px 1px #DDD;
 }
 
-.addPostAxios .addPostAxios-content textarea {
+.editPostAxios .editPostAxios-content textarea {
   height: 100px;
 }
 
-.addPostAxios .addPostAxios-content .btn-add {
-  background: #007bff;
-  border: 1px solid #007bff;
+.editPostAxios .editPostAxios-content .btn-edit {
+  background: #28a745;
+  border: 1px solid #28a745;
   font-size: 15px;
   line-height: 15px;
   font-weight: 400;
